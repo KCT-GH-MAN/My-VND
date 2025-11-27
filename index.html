@@ -2016,16 +2016,12 @@ button {
         let ratio = budgetNum > 0 ? spent / budgetNum : 0;
         if (ratio < 0) ratio = 0;
 
-        summary.innerText =
-            "Ngân sách: " +
-            formatCurrency(budgetNum) +
-            " | Đã chi: " +
-            formatCurrency(spent) +
-            " (" +
-            Math.round(ratio * 100) +
-            "%) |" +
-            " Còn lại: " +
-            formatCurrency(remain);
+        summary.innerHTML =
+    "Ngân sách: " + formatCurrency(budgetNum) +
+    " | Đã chi: " + formatCurrency(spent) +
+    " (" + Math.round(ratio * 100) + "%)" +
+    ' | <span class="nowrap">Còn lại: ' + formatCurrency(remain) + "</span>";
+
 
         let color = "#22c55e";
         if (ratio >= 0.8 && ratio <= 1) color = "#facc15";
