@@ -760,6 +760,11 @@ button {
     border: 1px solid #d1d5db !important;
     color: #111827 !important;
 }
+/* Ngăn tách dòng cho các nhãn như "Số dư" */
+.nowrap {
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
 
 </style>
 <!-- WEB MANIFEST (PWA ICON + NAME) -->
@@ -858,7 +863,8 @@ button {
 <span class="value" id="totalExpense">0 đ</span>
 </div>
 <div class="stat-row">
-<span>Số dư:</span>
+<span class="nowrap">Số dư:</span>
+
 <span class="value" id="balance">0 đ</span>
 </div>
 </div>
