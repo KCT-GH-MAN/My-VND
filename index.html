@@ -1893,10 +1893,11 @@ button {
 
         const summaryEl = document.getElementById("monthChartSummary");
         if (summaryEl) {
-            summaryEl.textContent =
-                "Tổng thu: " + formatCurrency(totalIncomeYear) +
-                " | Tổng chi: " + formatCurrency(totalExpenseYear) +
-                " | Số dư: " + formatCurrency(balanceYear);
+            summaryEl.innerHTML =
+    "Tổng thu: " + formatCurrency(totalIncomeYear) +
+    " | Tổng chi: " + formatCurrency(totalExpenseYear) +
+    ' | <span class="nowrap">Số dư: ' + formatCurrency(balanceYear) + "</span>";
+
         }
     }
 
